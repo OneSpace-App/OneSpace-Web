@@ -1,0 +1,59 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 500px;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+button {
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 32px;
+}
+
+.grid__item {
+    height: 200px;
+    background: #fff;
+    padding: 24px;
+    position: relative;
+}
+
+.grid__item:hover {
+    background-color: #f7bc1a;
+}
+
+.grid__item h1 {
+    line-height: 0;
+}
+
+.statistics {
+    position: absolute;
+    bottom: 0;
+}
+
+.shuffle-move {
+    transition: all 0.75s;
+}
+
+.shuffle-enter-active,
+.shuffle-leave-active {
+    transition: all 0.75s;
+}
+
+.shuffle-enter,
+.shuffle-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
