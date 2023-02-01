@@ -1,4 +1,4 @@
-# SCL-2022-SHRESHTHA
+# DaoSpace - Web Module
 
 ## Getting Started
 This is the official repository of Team Shreshtha for SCL 2022 organised by World Konkani Centre.
