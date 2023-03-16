@@ -24,7 +24,7 @@ const SideBar = ({ logout }) => (
             </div>
         </div>
         <div>
-            
+
         </div>
     </div>
 );
@@ -66,22 +66,25 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
             <div className="channel-list__list__wrapper">
                 <CompanyHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
-                <ChannelList 
+                <ChannelList
                     filters={filters}
                     channelRenderFilterFn={customChannelTeamFilter}
-                    List={(listProps) => (
-                        <TeamChannelList 
-                            {...listProps}
-                            type="team"
-                            isCreating={isCreating}
-                            setIsCreating={setIsCreating}
-                            setCreateType={setCreateType} 
-                            setIsEditing={setIsEditing}
-                            setToggleContainer={setToggleContainer}
-                        />
-                    )}
+                    List={(listProps) => {
+                        console.log(listProps);
+                        return (
+                            <TeamChannelList
+                                {...listProps}
+                                type="team"
+                                isCreating={isCreating}
+                                setIsCreating={setIsCreating}
+                                setCreateType={setCreateType}
+                                setIsEditing={setIsEditing}
+                                setToggleContainer={setToggleContainer}
+                            />
+                        )
+                    }}
                     Preview={(previewProps) => (
-                        <TeamChannelPreview 
+                        <TeamChannelPreview
                             {...previewProps}
                             setIsCreating={setIsCreating}
                             setIsEditing={setIsEditing}
@@ -90,22 +93,22 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
                         />
                     )}
                 />
-                <ChannelList 
+                <ChannelList
                     filters={filters}
                     channelRenderFilterFn={customChannelMessagingFilter}
                     List={(listProps) => (
-                        <TeamChannelList 
+                        <TeamChannelList
                             {...listProps}
                             type="messaging"
                             isCreating={isCreating}
                             setIsCreating={setIsCreating}
-                            setCreateType={setCreateType} 
+                            setCreateType={setCreateType}
                             setIsEditing={setIsEditing}
                             setToggleContainer={setToggleContainer}
                         />
                     )}
                     Preview={(previewProps) => (
-                        <TeamChannelPreview 
+                        <TeamChannelPreview
                             {...previewProps}
                             setIsCreating={setIsCreating}
                             setIsEditing={setIsEditing}
@@ -125,24 +128,24 @@ const ChannelListContainer = ({ setCreateType, setIsCreating, setIsEditing }) =>
     return (
         <>
             <div className="channel-list__container">
-              <ChannelListContent 
-                setIsCreating={setIsCreating} 
-                setCreateType={setCreateType} 
-                setIsEditing={setIsEditing} 
-              />
+                <ChannelListContent
+                    setIsCreating={setIsCreating}
+                    setCreateType={setCreateType}
+                    setIsEditing={setIsEditing}
+                />
             </div>
 
             <div className="channel-list__container-responsive"
-                style={{ left: toggleContainer ? "0%" : "-89%", backgroundColor: "#005fff"}}
+                style={{ left: toggleContainer ? "0%" : "-89%", backgroundColor: "#005fff" }}
             >
                 <div className="channel-list__container-toggle" onClick={() => setToggleContainer((prevToggleContainer) => !prevToggleContainer)}>
                 </div>
-                <ChannelListContent 
-                setIsCreating={setIsCreating} 
-                setCreateType={setCreateType} 
-                setIsEditing={setIsEditing}
-                setToggleContainer={setToggleContainer}
-              />
+                <ChannelListContent
+                    setIsCreating={setIsCreating}
+                    setCreateType={setCreateType}
+                    setIsEditing={setIsEditing}
+                    setToggleContainer={setToggleContainer}
+                />
             </div>
         </>
     )
