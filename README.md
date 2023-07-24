@@ -73,15 +73,3 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     cd client
     npm i && start
 
-
-
-Team Shreshtha
-
-members:
-Anirrudha Kamath
-K Avinash Nayak
-Bhagavi Nayak
-Karthik Mahale
-Srinidhi Bhat (Team Lead)
-Sushma
-V Sahana Kamath

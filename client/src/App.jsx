@@ -16,7 +16,7 @@ const axios = require('axios');
 
 const cookies = new Cookies();
 
-const apiKey = 't9cjj5mhxask';
+const apiKey = '5hpyugrtgkyj';
 const authToken = cookies.get("token");
 
 const client = StreamChat.getInstance(apiKey);
